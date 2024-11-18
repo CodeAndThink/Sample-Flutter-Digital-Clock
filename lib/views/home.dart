@@ -37,18 +37,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget lcdClock() {
     return SizedBox(
-            height: 70,
-            child: AspectRatio(
-              aspectRatio: n.length.toDouble() / 1.5,
-              child: LedDigits(
-                string: n,
-                spacing: 12,
-                numberOfLeds: n.length,
-                onColor: const Color(0xFF171717),
-                backgroundColor: Colors.transparent,
-                offColor: const Color(0xFFE6E6E6) ,
-              ),
+      height: 70,
+      child: AspectRatio(
+          aspectRatio: n.length.toDouble() / 1.5,
+          child: Center(
+            child: LedDigits(
+              string: n,
+              spacing: 12,
+              numberOfLeds: n.length,
+              onColor: const Color(0xFF171717),
+              backgroundColor: Colors.transparent,
+              offColor: const Color(0xFFE6E6E6),
             ),
-          );
+          )),
+    );
   }
 }
